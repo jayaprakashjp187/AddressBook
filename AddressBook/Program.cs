@@ -9,8 +9,8 @@ namespace AddressBook
         static void Main(string[] args)
         {
 
-            Console.WriteLine("welcome to the address book program\n2.Add Contact in address book");
-            Console.WriteLine("1.create a contact in address book");
+            Console.WriteLine("welcome to the address book program");
+            Console.WriteLine("1.create a contact in address book\n2.Add Contact in address book\n3.Edit contacts in a address book");
             Console.WriteLine("choose what proogram u want");
             int choose = Convert.ToInt32(Console.ReadLine());
             switch (choose)
@@ -54,7 +54,28 @@ namespace AddressBook
                         Console.WriteLine("email=" + details.Email);
                     }
 
-                        break;
+                   break;
+                 case 3:
+                    List<EditCustomer> p = new List<EditCustomer>();
+                    EditCustomer EditContact = new EditCustomer { name = "pallavi", lastname = "ediga", Address = "shivmogga", City = "bangalore", state = "karnataka", pin = 560001, num = 6361419518, Email = "pallavig1997@gmail.com" };
+
+                    p.Add(EditContact);
+                    
+                    foreach (EditCustomer details in p)
+                    {
+                        Console.WriteLine("name=" + details.name);
+
+                        Console.WriteLine("lastname=" + details.lastname);
+                        Console.WriteLine("address=" + details.Address);
+                        Console.WriteLine("city=" + details.City);
+                        Console.WriteLine("state=" + details.state);
+                        Console.WriteLine("pin" + details.pin);
+                        Console.WriteLine("phonenumber=" + details.num);
+                        Console.WriteLine("email=" + details.Email);
+                        EditCustomer.EditContact();
+                    }
+
+                    break;
 
 
             } 
